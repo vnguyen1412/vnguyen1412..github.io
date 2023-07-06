@@ -8,9 +8,12 @@
 }
 
 .App-top {
+  display: flex;
+  justify-content: center;
   text-align: center;
   height: 100px;
-  width: 50%;
+  width: 100%;
+  color: white;
   background-color: rgb(68, 66, 105);
 }
 
@@ -22,8 +25,9 @@
   text-align: left;
 }
 
-.App-name-display {
-  text-align: center;
+.App-background {
+  background-color: #e8edf8;
+  min-height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
