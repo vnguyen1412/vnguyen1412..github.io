@@ -8,7 +8,7 @@ function CharacterPicture() {
   return(
     <Box
       sx={{width: 300, height: 500, bgcolor: 'red'}}
-      style={{position: "relative", top: "100px", left: "100px"}}
+      style={{position: "absolute", top: "30px", left: "30px"}}
     >
       <AspectRatio
         variant="soft"
@@ -28,11 +28,11 @@ function CharacterPicture() {
 function SkillList() {
   return(
     <Box
-      sx={{width: 300, height: 500, bgcolor: 'blue'}}
-      style={{position: "relative", top: "50px", left: "600px"}}
+      sx={{width: 300, height: 400, bgcolor: 'blue'}}
+      style={{position: "absolute", top: "120px", left: "350px"}}
     >
       <p>
-        dfjasldfjas;ldfj
+        skills
       </p>
     </Box>
   );
@@ -40,8 +40,13 @@ function SkillList() {
 
 function CharacterName() {
   return(
-    <Box>
-
+    <Box
+      sx={{width: 300, height: 75, bgcolor: 'green'}}
+      style={{position: "absolute", top: "30px", left: "350px"}}
+    >
+      <p>
+        character's name
+      </p>
     </Box>
   );
 }
@@ -63,12 +68,18 @@ function App() {
           Genshin Impact Character Archive
         </h1>
       </div>
-      <div>
+      <Box
+        className="App-info-display"
+        sx={{bgcolor: "pink"}}      
+      >
         <CharacterPicture />
-      </div>
-      <div>
+        <CharacterName />
         <SkillList />
-      </div>
+      </Box>
+      {/* <div>
+        <CharacterPicture />
+        <SkillList />
+      </div> */}
     </div>
   );
 }
