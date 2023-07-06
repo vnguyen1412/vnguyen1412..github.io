@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d5725ca.css",
-    "main.js": "/static/js/main.6cdd931c.js",
+    "main.css": "/static/css/main.e014cfa0.css",
+    "main.js": "/static/js/main.c59b1180.js",
     "static/js/787.59752a46.chunk.js": "/static/js/787.59752a46.chunk.js",
-    "static/media/SAOWallpaper.jpg": "/static/media/SAOWallpaper.3e840006eecb09359308.jpg",
+    "static/media/Jean.webp": "/static/media/Jean.6628d8dd5c0e69960ed5.webp",
+    "static/media/Genshin-Impact-Anniversary.jpg": "/static/media/Genshin-Impact-Anniversary.e8d1b4b1a8f03a875e57.jpg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.0d5725ca.css.map": "/static/css/main.0d5725ca.css.map",
-    "main.6cdd931c.js.map": "/static/js/main.6cdd931c.js.map",
+    "main.e014cfa0.css.map": "/static/css/main.e014cfa0.css.map",
+    "main.c59b1180.js.map": "/static/js/main.c59b1180.js.map",
     "787.59752a46.chunk.js.map": "/static/js/787.59752a46.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d5725ca.css",
-    "static/js/main.6cdd931c.js"
+    "static/css/main.e014cfa0.css",
+    "static/js/main.c59b1180.js"
   ]
 }
