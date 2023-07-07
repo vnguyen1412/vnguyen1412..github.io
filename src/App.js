@@ -7,7 +7,7 @@ import characterPicture from './Jean.webp';
 function CharacterPicture() {
   return(
     <Box
-      sx={{width: 300, height: 500, bgcolor: 'red'}}
+      sx={{width: 300, height: 500}}
       style={{position: "absolute", top: "30px", left: "30px"}}
     >
       <AspectRatio
@@ -28,12 +28,22 @@ function CharacterPicture() {
 function SkillList() {
   return(
     <Box
-      sx={{width: 300, height: 400, bgcolor: 'blue'}}
-      style={{position: "absolute", top: "120px", left: "350px"}}
+      sx={{width: 600, height: 400}}
+      style={{position: "absolute", top: "120px", left: "450px"}}
     >
-      <p>
-        skills
-      </p>
+      <h3>
+        Weapon:
+      </h3>
+      <p>Sword</p>
+      <h3>
+        Talents:
+      </h3>
+      <p>Normal Attack</p>
+      <p>Gale Blade</p>
+      <p>Dandelion Breeze</p>
+      <p>Wind Companion</p>
+      <p>Let the Wind Lead</p>
+      <p>Guiding Breeze</p>
     </Box>
   );
 }
@@ -41,12 +51,12 @@ function SkillList() {
 function CharacterName() {
   return(
     <Box
-      sx={{width: 300, height: 75, bgcolor: 'green'}}
-      style={{position: "absolute", top: "30px", left: "350px"}}
+      sx={{width: 600, height: 75}}
+      style={{position: "absolute", top: "30px", left: "450px"}}
     >
-      <p>
-        character's name
-      </p>
+      <h2>
+        Jean
+      </h2>
     </Box>
   );
 }
@@ -70,7 +80,7 @@ function App() {
       </div>
       <Box
         className="App-info-display"
-        sx={{bgcolor: "pink"}}      
+        // sx={{bgcolor: "pink"}}      
       >
         <CharacterPicture />
         <CharacterName />
