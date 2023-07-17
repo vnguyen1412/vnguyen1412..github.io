@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.41593a20.css",
-    "main.js": "/static/js/main.5eedcfc3.js",
+    "main.css": "/static/css/main.0c784c9f.css",
+    "main.js": "/static/js/main.2cf04346.js",
     "static/js/787.59752a46.chunk.js": "/static/js/787.59752a46.chunk.js",
     "static/media/Jean.webp": "/static/media/Jean.6628d8dd5c0e69960ed5.webp",
     "static/media/Genshin-Impact-Anniversary.jpg": "/static/media/Genshin-Impact-Anniversary.e8d1b4b1a8f03a875e57.jpg",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/JeanNormalAttack.webp": "/static/media/JeanNormalAttack.bbb685af419cf8d74576.webp",
+    "static/media/JeanBurst.webp": "/static/media/JeanBurst.434d3ecdcb15dfff5adc.webp",
+    "static/media/JeanPassive2.webp": "/static/media/JeanPassive2.a4c38aa56ec1c4f2b0ca.webp",
+    "static/media/JeanPassive1.webp": "/static/media/JeanPassive1.24062c809d1c2b4dc199.webp",
+    "static/media/JeanPassive3.webp": "/static/media/JeanPassive3.6cc24bfd07952939e275.webp",
     "index.html": "/index.html",
-    "main.41593a20.css.map": "/static/css/main.41593a20.css.map",
-    "main.5eedcfc3.js.map": "/static/js/main.5eedcfc3.js.map",
+    "main.0c784c9f.css.map": "/static/css/main.0c784c9f.css.map",
+    "main.2cf04346.js.map": "/static/js/main.2cf04346.js.map",
     "787.59752a46.chunk.js.map": "/static/js/787.59752a46.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41593a20.css",
-    "static/js/main.5eedcfc3.js"
+    "static/css/main.0c784c9f.css",
+    "static/js/main.2cf04346.js"
   ]
 }
