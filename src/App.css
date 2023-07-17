@@ -1,3 +1,8 @@
+.test-flexbox {
+  align-content: space-around;
+  align-items: flex-end;
+}
+
 .test {
   flex-direction: row;
   justify-content: flex-start;
@@ -19,7 +24,10 @@ h2 {
 
 h3 {
   /* font-size: 20px; */
+  font-weight: bold;
   font-size: 2.5vmin;
+  margin-right: 0.5em;
+  margin-top: 0px;
 }
 
 p {
@@ -27,13 +35,14 @@ p {
   font-size: 2vmin;
 }
 
-.App {
+.weaponline h3, .weaponline p {
+  display: inline-block;
+  vertical-align: sub;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
 }
 
 .App-top {
@@ -66,7 +75,6 @@ p {
 
 .App-background {
   position: relative;
-  /* min-height: 100vh; */
   min-height: 100vh;
   width: 100%;
   isolation: isolate;
@@ -84,7 +92,7 @@ p {
   /* background: pink; */
   opacity: .3;
 
-  background-image: url(/src/Genshin-Impact-Anniversary.jpg);
+  background-image: url(/src/images/Genshin-Impact-Anniversary.jpg);
   background-size: cover;
   background-position: center;
 }
