@@ -15,7 +15,7 @@
 const images = {
     Jean: require('../images/Jean.webp'),
     JeanNormalAttack: require('../images/JeanNormalAttack.webp'),
-    JeanSkill: require('../images/JeanSkill.jpg'),
+    JeanSkill: require('../images/JeanSkill.webp'),
     JeanBurst: require('../images/JeanBurst.webp'),
     JeanPassive1: require('../images/JeanPassive1.webp'),
     JeanPassive2: require('../images/JeanPassive2.webp'),
