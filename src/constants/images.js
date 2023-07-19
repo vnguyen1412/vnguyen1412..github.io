@@ -13,13 +13,21 @@
 //for some reason adding the .default is not showing up the image
 //Ex: Jean: require('../images/Jean.webp').default
 const images = {
-    Jean: require('../images/Jean.webp'),
-    JeanNormalAttack: require('../images/JeanNormalAttack.webp'),
-    JeanSkill: require('../images/JeanSkill.webp'),
-    JeanBurst: require('../images/JeanBurst.webp'),
-    JeanPassive1: require('../images/JeanPassive1.webp'),
-    JeanPassive2: require('../images/JeanPassive2.webp'),
-    JeanPassive3: require('../images/JeanPassive3.webp'),
+    Jean: require('../images/Jean/Jean.webp'),
+    JeanNormalAttack: require('../images/Jean/JeanNormalAttack.webp'),
+    JeanSkill: require('../images/Jean/JeanSkill.webp'),
+    JeanBurst: require('../images/Jean/JeanBurst.webp'),
+    JeanPassive1: require('../images/Jean/JeanPassive1.webp'),
+    JeanPassive2: require('../images/Jean/JeanPassive2.webp'),
+    JeanPassive3: require('../images/Jean/JeanPassive3.webp'),
+
+    Diluc: require('../images/Diluc/Diluc.webp'),
+    DilucNormalAttack: require('../images/Diluc/DilucNormalAttack.webp'),
+    DilucSkill: require('../images/Diluc/DilucSkill.webp'),
+    DilucBurst: require('../images/Diluc/DilucBurst.webp'),
+    DilucPassive1: require('../images/Diluc/DilucPassive1.webp'),
+    DilucPassive2: require('../images/Diluc/DilucPassive2.webp'),
+    DilucPassive3: require('../images/Diluc/DilucPassive3.webp'),
 }
 
 export default images;

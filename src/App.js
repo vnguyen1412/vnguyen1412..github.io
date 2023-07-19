@@ -1,11 +1,11 @@
 import './App.css';
-import CharacterInfo from './character-info.js';
+import {person, person2} from './character-info.js';
 import {Button, Box, Grid} from '@mui/material';
 import {AspectRatio} from '@mui/joy';
 import { styled } from '@mui/material/styles';
 // import characterPicture from './images/Jean.webp';
 // import jeanSkill from './images/JeanSkill.jpg';
-import images from './constants/images.js';
+// import images from './constants/images.js';
 import * as React from 'react';
 
 const BootstrapButton = styled(Button)({
@@ -20,13 +20,16 @@ const BootstrapButton = styled(Button)({
   }
 });
 
-let person = new CharacterInfo(
-  'Jean',
-  images.Jean,
-  'Sword',
-  ['Favonius Bladework', 'Gale Blade', 'Dandelion Breeze', 'Wind Companion', 'Let the Wind Lead', 'Guiding Breeze'],
-  [images.JeanNormalAttack, images.JeanSkill, images.JeanBurst, images.JeanPassive1, images.JeanPassive2, images.JeanPassive3],
-  ['Desc1', 'Desc2', 'Desc3', 'Desc4', 'Desc5', 'Desc6',])
+// let person = new CharacterInfo(
+//   'Jean',
+//   images.Jean,
+//   'Sword',
+//   ['Favonius Bladework', 'Gale Blade', 'Dandelion Breeze', 'Wind Companion', 'Let the Wind Lead', 'Guiding Breeze'],
+//   [images.JeanNormalAttack, images.JeanSkill, images.JeanBurst, images.JeanPassive1, images.JeanPassive2, images.JeanPassive3],
+//   ['Desc1', 'Desc2', 'Desc3', 'Desc4', 'Desc5', 'Desc6',])
+
+let characterlist = [person, person2];
+let counter = 1;
 
 function App() {
   return (
@@ -201,21 +204,21 @@ function ShanaeTest() {
         {/* picture container */}
         <Grid item xs={12} md={4}>
           <Grid item xs={12}>
-            <CharacterNameAndPicture characterName={person.name} characterPicture={person.picture}/>
+            <CharacterNameAndPicture characterName={characterlist[counter].name} characterPicture={characterlist[counter].picture}/>
           </Grid>
           <Grid item xs={12}>
-            <WeaponName characterWeapon={person.weapon}/>
+            <WeaponName characterWeapon={characterlist[counter].weapon}/>
           </Grid>
         </Grid>
 
         {/* skill container */}
         <Grid container item xs={12} md={8} spacing={2}>
-          <SkillCard skillName={person.skillNames[0]} skillPicture={person.skillImages[0]} skillDescription={person.skillDescriptions[0]}/>
-          <SkillCard skillName={person.skillNames[1]} skillPicture={person.skillImages[1]} skillDescription={person.skillDescriptions[1]}/>
-          <SkillCard skillName={person.skillNames[2]} skillPicture={person.skillImages[2]} skillDescription={person.skillDescriptions[2]}/>
-          <SkillCard skillName={person.skillNames[3]} skillPicture={person.skillImages[3]} skillDescription={person.skillDescriptions[3]}/>
-          <SkillCard skillName={person.skillNames[4]} skillPicture={person.skillImages[4]} skillDescription={person.skillDescriptions[4]}/>
-          <SkillCard skillName={person.skillNames[5]} skillPicture={person.skillImages[5]} skillDescription={person.skillDescriptions[5]}/>
+          <SkillCard skillName={characterlist[counter].skillNames[0]} skillPicture={characterlist[counter].skillImages[0]} skillDescription={characterlist[counter].skillDescriptions[0]}/>
+          <SkillCard skillName={characterlist[counter].skillNames[1]} skillPicture={characterlist[counter].skillImages[1]} skillDescription={characterlist[counter].skillDescriptions[1]}/>
+          <SkillCard skillName={characterlist[counter].skillNames[2]} skillPicture={characterlist[counter].skillImages[2]} skillDescription={characterlist[counter].skillDescriptions[2]}/>
+          <SkillCard skillName={characterlist[counter].skillNames[3]} skillPicture={characterlist[counter].skillImages[3]} skillDescription={characterlist[counter].skillDescriptions[3]}/>
+          <SkillCard skillName={characterlist[counter].skillNames[4]} skillPicture={characterlist[counter].skillImages[4]} skillDescription={characterlist[counter].skillDescriptions[4]}/>
+          <SkillCard skillName={characterlist[counter].skillNames[5]} skillPicture={characterlist[counter].skillImages[5]} skillDescription={characterlist[counter].skillDescriptions[5]}/>
         </Grid>
       </Grid>
     </Box>
