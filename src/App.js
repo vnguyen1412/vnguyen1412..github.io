@@ -178,38 +178,49 @@ function WeaponName({ characterWeapon }) {
 //   );
 // }
 
-function SwitchController() {
-  return (
-    <Stack className="profile-switch" direction="row">
-      <IconButton
-        color="secondary"
-        aria-label="arrow-back"
-        size="large"
-        style={{ padding: "0" }}
-      >
-        <NavigateBefore sx={{ color: "white", fontSize: "2em" }} />
-      </IconButton>
-      <IconButton
-        color="secondary"
-        aria-label="arrow-forward"
-        size="large"
-        style={{ padding: "0" }}
-      >
-        <NavigateNext sx={{ color: "white", fontSize: "2em" }} />
-      </IconButton>
-    </Stack>
-  );
-}
+// function SwitchController() {
+//   return (
+//     <Stack className="profile-switch" direction="row">
+//       <IconButton
+//         color="secondary"
+//         aria-label="arrow-back"
+//         size="large"
+//         style={{ padding: "0" }}
+//       >
+//         <NavigateBefore sx={{ color: "white", fontSize: "2em" }} />
+//       </IconButton>
+//       <IconButton
+//         color="secondary"
+//         aria-label="arrow-forward"
+//         size="large"
+//         style={{ padding: "0" }}
+//       >
+//         <NavigateNext sx={{ color: "white", fontSize: "2em" }} />
+//       </IconButton>
+//     </Stack>
+//   );
+// }
 
 function ShanaeTest() {
   return (
     <Box className="App-info-display" sx={{ p: 2 }}>
-      <SwitchController />
+      {/* <SwitchController /> */}
 
-      <div className="test1">
+      {/* <div className="test1"> */}
         <Grid container className="info-container" spacing={2}>
+          <Grid item md={1} sx={{alignSelf: "center"}}>
+            <IconButton
+              color="secondary"
+              aria-label="arrow-back"
+              size="large"
+              style={{ padding: "0" }}
+            >
+              <NavigateBefore sx={{ color: "white", fontSize: "3em" }} />
+            </IconButton>
+          </Grid>
+
           {/* picture container */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={3}>
             <Grid item xs={12}>
               <CharacterNameAndPicture
                 characterName={characterlist[counter].name}
@@ -223,39 +234,39 @@ function ShanaeTest() {
 
           {/* skill container */}
           {/* <Grid container item xs={12} md={8} spacing={4}>
-          <SkillCard
-            skillName={characterlist[counter].skillNames[0]}
-            skillPicture={characterlist[counter].skillImages[0]}
-            skillDescription={characterlist[counter].skillDescriptions[0]}
-          />
-          <SkillCard
-            skillName={characterlist[counter].skillNames[1]}
-            skillPicture={characterlist[counter].skillImages[1]}
-            skillDescription={characterlist[counter].skillDescriptions[1]}
-          />
-          <SkillCard
-            skillName={characterlist[counter].skillNames[2]}
-            skillPicture={characterlist[counter].skillImages[2]}
-            skillDescription={characterlist[counter].skillDescriptions[2]}
-          />
-          <SkillCard
-            skillName={characterlist[counter].skillNames[3]}
-            skillPicture={characterlist[counter].skillImages[3]}
-            skillDescription={characterlist[counter].skillDescriptions[3]}
-          />
-          <SkillCard
-            skillName={characterlist[counter].skillNames[4]}
-            skillPicture={characterlist[counter].skillImages[4]}
-            skillDescription={characterlist[counter].skillDescriptions[4]}
-          />
-          <SkillCard
-            skillName={characterlist[counter].skillNames[5]}
-            skillPicture={characterlist[counter].skillImages[5]}
-            skillDescription={characterlist[counter].skillDescriptions[5]}
-          />
-        </Grid> */}
+            <SkillCard
+              skillName={characterlist[counter].skillNames[0]}
+              skillPicture={characterlist[counter].skillImages[0]}
+              skillDescription={characterlist[counter].skillDescriptions[0]}
+            />
+            <SkillCard
+              skillName={characterlist[counter].skillNames[1]}
+              skillPicture={characterlist[counter].skillImages[1]}
+              skillDescription={characterlist[counter].skillDescriptions[1]}
+            />
+            <SkillCard
+              skillName={characterlist[counter].skillNames[2]}
+              skillPicture={characterlist[counter].skillImages[2]}
+              skillDescription={characterlist[counter].skillDescriptions[2]}
+            />
+            <SkillCard
+              skillName={characterlist[counter].skillNames[3]}
+              skillPicture={characterlist[counter].skillImages[3]}
+              skillDescription={characterlist[counter].skillDescriptions[3]}
+            />
+            <SkillCard
+              skillName={characterlist[counter].skillNames[4]}
+              skillPicture={characterlist[counter].skillImages[4]}
+              skillDescription={characterlist[counter].skillDescriptions[4]}
+            />
+            <SkillCard
+              skillName={characterlist[counter].skillNames[5]}
+              skillPicture={characterlist[counter].skillImages[5]}
+              skillDescription={characterlist[counter].skillDescriptions[5]}
+            />
+          </Grid> */}
 
-          <Grid container item xs={12} md={8} spacing={4}>
+          <Grid container item xs={12} md={7} spacing={4}>
             <FlippableCard
               skillName={characterlist[counter].skillNames[0]}
               skillPicture={characterlist[counter].skillImages[0]}
@@ -287,8 +298,19 @@ function ShanaeTest() {
               skillDescription={characterlist[counter].skillDescriptions[5]}
             />
           </Grid>
+
+          <Grid item md={1} sx={{alignSelf: "center"}}>
+            <IconButton
+              color="secondary"
+              aria-label="arrow-forward"
+              size="large"
+              style={{ padding: "0" }}
+            >
+              <NavigateNext sx={{ color: "white", fontSize: "3em" }} />
+            </IconButton>
+          </Grid>
         </Grid>
-      </div>
+      {/* </div> */}
     </Box>
   );
 }
