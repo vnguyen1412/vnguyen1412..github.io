@@ -1,10 +1,39 @@
+.profile-switch {
+  position: relative;
+  /* align-content: center; */
+  justify-content: space-between;
+  margin-top: 50%;
+  padding-left: 0;
+}
+
+.image-card,
+.name-card,
+.weaponline {
+  border-radius: 10px;
+}
+
+.weaponline {
+  background-color: #171143;
+  margin-top: 5%;
+}
+
+.name-card {
+  background-color: #C89B40;
+  margin: 0;
+  padding: 2%;
+}
+
+.image-card {
+  background-color:#171143;
+}
+
 .skill-card {
   width: 100%;
   min-height: 40vh;
   border-radius: 50%;
 }
 
-.test {
+.info-container {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
@@ -36,10 +65,15 @@ p {
   font-size: 2vmin;
 }
 
-.weaponline h3, .weaponline p {
-  display: inline-block;
+.weaponline h3 {
+  /* display: inline-block;
   vertical-align: sub;
-  text-align: center;
+  text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  color: white;
 }
 
 .App {
@@ -70,6 +104,7 @@ p {
   width: 75%;
   top: 0.25vh;
   margin: auto;
+  /* justify-content: center; */
   background-color: #D4D0DE;
   border-radius: 15px;
   border: 1px solid black;
