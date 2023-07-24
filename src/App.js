@@ -131,14 +131,14 @@ function CharacterNameAndPicture({ characterName, characterPicture }) {
         <img src={characterPicture} alt="testing" />
 
         {/* figure out how to center the arrows here */}
-        <Stack className="profile-switch" direction="row">
+        {/* <Stack className="profile-switch" direction="row">
           <IconButton color="secondary" aria-label="arrow-back" size="large" style={{padding: "0"}}>
             <NavigateBefore sx={{ color: 'white', fontSize: "2em" }} /> 
           </IconButton>
           <IconButton color="secondary" aria-label="arrow-forward" size="large" style={{padding: "0"}}>
             <NavigateNext sx={{ color: 'white', fontSize: "2em" }} />
           </IconButton>
-        </Stack>
+        </Stack> */}
       </AspectRatio>
     </div>
   );
@@ -178,25 +178,51 @@ function WeaponName({ characterWeapon }) {
 //   );
 // }
 
+function SwitchController() {
+  return (
+    <Stack className="profile-switch" direction="row">
+      <IconButton
+        color="secondary"
+        aria-label="arrow-back"
+        size="large"
+        style={{ padding: "0" }}
+      >
+        <NavigateBefore sx={{ color: "white", fontSize: "2em" }} />
+      </IconButton>
+      <IconButton
+        color="secondary"
+        aria-label="arrow-forward"
+        size="large"
+        style={{ padding: "0" }}
+      >
+        <NavigateNext sx={{ color: "white", fontSize: "2em" }} />
+      </IconButton>
+    </Stack>
+  );
+}
+
 function ShanaeTest() {
   return (
     <Box className="App-info-display" sx={{ p: 2 }}>
-      <Grid container className="info-container" spacing={2}>
-        {/* picture container */}
-        <Grid item xs={12} md={4}>
-          <Grid item xs={12}>
-            <CharacterNameAndPicture
-              characterName={characterlist[counter].name}
-              characterPicture={characterlist[counter].picture}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <WeaponName characterWeapon={characterlist[counter].weapon} />
-          </Grid>
-        </Grid>
+      <SwitchController />
 
-        {/* skill container */}
-        {/* <Grid container item xs={12} md={8} spacing={4}>
+      <div className="test1">
+        <Grid container className="info-container" spacing={2}>
+          {/* picture container */}
+          <Grid item xs={12} md={4}>
+            <Grid item xs={12}>
+              <CharacterNameAndPicture
+                characterName={characterlist[counter].name}
+                characterPicture={characterlist[counter].picture}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <WeaponName characterWeapon={characterlist[counter].weapon} />
+            </Grid>
+          </Grid>
+
+          {/* skill container */}
+          {/* <Grid container item xs={12} md={8} spacing={4}>
           <SkillCard
             skillName={characterlist[counter].skillNames[0]}
             skillPicture={characterlist[counter].skillImages[0]}
@@ -228,39 +254,41 @@ function ShanaeTest() {
             skillDescription={characterlist[counter].skillDescriptions[5]}
           />
         </Grid> */}
-        <Grid container item xs={12} md={8} spacing={4}>
-          <FlippableCard
-            skillName={characterlist[counter].skillNames[0]}
-            skillPicture={characterlist[counter].skillImages[0]}
-            skillDescription={characterlist[counter].skillDescriptions[0]}
-          />
-          <FlippableCard
-            skillName={characterlist[counter].skillNames[1]}
-            skillPicture={characterlist[counter].skillImages[1]}
-            skillDescription={characterlist[counter].skillDescriptions[1]}
-          />
-          <FlippableCard
-            skillName={characterlist[counter].skillNames[2]}
-            skillPicture={characterlist[counter].skillImages[2]}
-            skillDescription={characterlist[counter].skillDescriptions[2]}
-          />
-          <FlippableCard
-            skillName={characterlist[counter].skillNames[3]}
-            skillPicture={characterlist[counter].skillImages[3]}
-            skillDescription={characterlist[counter].skillDescriptions[3]}
-          />
-          <FlippableCard
-            skillName={characterlist[counter].skillNames[4]}
-            skillPicture={characterlist[counter].skillImages[4]}
-            skillDescription={characterlist[counter].skillDescriptions[4]}
-          />
-          <FlippableCard
-            skillName={characterlist[counter].skillNames[5]}
-            skillPicture={characterlist[counter].skillImages[5]}
-            skillDescription={characterlist[counter].skillDescriptions[5]}
-          />
+
+          <Grid container item xs={12} md={8} spacing={4}>
+            <FlippableCard
+              skillName={characterlist[counter].skillNames[0]}
+              skillPicture={characterlist[counter].skillImages[0]}
+              skillDescription={characterlist[counter].skillDescriptions[0]}
+            />
+            <FlippableCard
+              skillName={characterlist[counter].skillNames[1]}
+              skillPicture={characterlist[counter].skillImages[1]}
+              skillDescription={characterlist[counter].skillDescriptions[1]}
+            />
+            <FlippableCard
+              skillName={characterlist[counter].skillNames[2]}
+              skillPicture={characterlist[counter].skillImages[2]}
+              skillDescription={characterlist[counter].skillDescriptions[2]}
+            />
+            <FlippableCard
+              skillName={characterlist[counter].skillNames[3]}
+              skillPicture={characterlist[counter].skillImages[3]}
+              skillDescription={characterlist[counter].skillDescriptions[3]}
+            />
+            <FlippableCard
+              skillName={characterlist[counter].skillNames[4]}
+              skillPicture={characterlist[counter].skillImages[4]}
+              skillDescription={characterlist[counter].skillDescriptions[4]}
+            />
+            <FlippableCard
+              skillName={characterlist[counter].skillNames[5]}
+              skillPicture={characterlist[counter].skillImages[5]}
+              skillDescription={characterlist[counter].skillDescriptions[5]}
+            />
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     </Box>
   );
 }

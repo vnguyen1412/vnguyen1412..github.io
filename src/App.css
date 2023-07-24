@@ -1,8 +1,14 @@
+.test1 {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
 .profile-switch {
   position: relative;
   /* align-content: center; */
   justify-content: space-between;
-  margin-top: 50%;
+  /* margin-top: 50%; */
   padding-left: 0;
 }
 
@@ -101,7 +107,7 @@ p {
   position: relative;
   /* min-height: 60vh; */
   height: 100%;
-  width: 75%;
+  width: 80%;
   top: 0.25vh;
   margin: auto;
   /* justify-content: center; */
