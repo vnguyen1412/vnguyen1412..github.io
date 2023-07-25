@@ -1,5 +1,6 @@
 import "./App.css";
-import { person, person2 } from "./character-info.js";
+// import { person, person2 } from "./character-info.js";
+import { people } from "./character-info.js";
 import { Button, Box, Grid, Stack, IconButton } from "@mui/material";
 import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 import { AspectRatio } from "@mui/joy";
@@ -23,8 +24,9 @@ const BootstrapButton = styled(Button)({
   },
 });
 
-let characterlist = [person, person2];
-let counter = 0;
+// const characterlist = [person, person2];
+const characterlist = people;
+// let counter = 0;
 
 function App() {
   // let [counter, setCounter] = useState(0);
@@ -202,6 +204,20 @@ function WeaponName({ characterWeapon }) {
 // }
 
 function ShanaeTest() {
+  let [counter, setCounter] = useState(0);
+
+  function HandleCharacterSwitch(isNext) {
+    if(isNext) {
+      setCounter((counter + 1) % characterlist.length);
+    }
+    else if(!isNext && counter == 0) {
+      setCounter(characterlist.length - 1);
+    }
+    else {
+      setCounter((counter - 1) % characterlist.length);
+    }
+  }
+
   return (
     <Box className="App-info-display" sx={{ p: 2 }}>
       {/* <SwitchController /> */}
@@ -214,6 +230,7 @@ function ShanaeTest() {
               aria-label="arrow-back"
               size="large"
               style={{ padding: "0" }}
+              onClick={() => HandleCharacterSwitch(false)}
             >
               <NavigateBefore sx={{ color: "white", fontSize: "3em" }} />
             </IconButton>
@@ -305,6 +322,7 @@ function ShanaeTest() {
               aria-label="arrow-forward"
               size="large"
               style={{ padding: "0" }}
+              onClick={() => HandleCharacterSwitch(true)}
             >
               <NavigateNext sx={{ color: "white", fontSize: "3em" }} />
             </IconButton>

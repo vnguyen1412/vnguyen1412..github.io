@@ -28,6 +28,14 @@ const images = {
     DilucPassive1: require('../images/Diluc/DilucPassive1.webp'),
     DilucPassive2: require('../images/Diluc/DilucPassive2.webp'),
     DilucPassive3: require('../images/Diluc/DilucPassive3.webp'),
+
+    Shogun: require('../images/Shogun/Shogun.webp'),
+    ShogunNormalAttack: require('../images/Shogun/ShogunNormalAttack.webp'),
+    ShogunSkill: require('../images/Shogun/ShogunSkill.webp'),
+    ShogunBurst: require('../images/Shogun/ShogunBurst.webp'),
+    ShogunPassive1: require('../images/Shogun/ShogunPassive1.webp'),
+    ShogunPassive2: require('../images/Shogun/ShogunPassive2.webp'),
+    ShogunPassive3: require('../images/Shogun/ShogunPassive3.webp'),
 }
 
 export default images;
