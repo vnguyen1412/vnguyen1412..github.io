@@ -1,22 +1,37 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c784c9f.css",
-    "main.js": "/static/js/main.2cf04346.js",
+    "main.css": "/static/css/main.23802f2d.css",
+    "main.js": "/static/js/main.0cb463fd.js",
     "static/js/787.59752a46.chunk.js": "/static/js/787.59752a46.chunk.js",
     "static/media/Jean.webp": "/static/media/Jean.6628d8dd5c0e69960ed5.webp",
+    "static/media/Shogun.webp": "/static/media/Shogun.00f0853b8de7d675ad2e.webp",
     "static/media/Genshin-Impact-Anniversary.jpg": "/static/media/Genshin-Impact-Anniversary.e8d1b4b1a8f03a875e57.jpg",
+    "static/media/Diluc.webp": "/static/media/Diluc.650856107e380782eb19.webp",
+    "static/media/ShogunBurst.webp": "/static/media/ShogunBurst.862dd6a003b1b8beff22.webp",
+    "static/media/ShogunNormalAttack.webp": "/static/media/ShogunNormalAttack.ac3e101161549123f248.webp",
     "static/media/JeanNormalAttack.webp": "/static/media/JeanNormalAttack.bbb685af419cf8d74576.webp",
     "static/media/JeanBurst.webp": "/static/media/JeanBurst.434d3ecdcb15dfff5adc.webp",
+    "static/media/DilucNormalAttack.webp": "/static/media/DilucNormalAttack.ffd5468c13323ae3fec8.webp",
+    "static/media/DilucBurst.webp": "/static/media/DilucBurst.474dd14d6ff6e05dde0c.webp",
+    "static/media/ShogunPassive3.webp": "/static/media/ShogunPassive3.cc0557fae9676ec29054.webp",
+    "static/media/ShogunPassive2.webp": "/static/media/ShogunPassive2.bcc34e7623865d9e58c0.webp",
+    "static/media/JeanSkill.webp": "/static/media/JeanSkill.b78371da3bcfd43d8456.webp",
+    "static/media/DilucSkill.webp": "/static/media/DilucSkill.ec3852d836e5fa0c51c5.webp",
+    "static/media/DilucPassive2.webp": "/static/media/DilucPassive2.0d98c0e8111f51285cb2.webp",
     "static/media/JeanPassive2.webp": "/static/media/JeanPassive2.a4c38aa56ec1c4f2b0ca.webp",
+    "static/media/ShogunSkill.webp": "/static/media/ShogunSkill.9d220f7092a796059ab2.webp",
+    "static/media/DilucPassive3.webp": "/static/media/DilucPassive3.ae5e1de2d94871d9fc67.webp",
     "static/media/JeanPassive1.webp": "/static/media/JeanPassive1.24062c809d1c2b4dc199.webp",
+    "static/media/ShogunPassive1.webp": "/static/media/ShogunPassive1.c3e4b9f9c7c201fd9797.webp",
+    "static/media/DilucPassive1.webp": "/static/media/DilucPassive1.a7c99822c5d8128a0581.webp",
     "static/media/JeanPassive3.webp": "/static/media/JeanPassive3.6cc24bfd07952939e275.webp",
     "index.html": "/index.html",
-    "main.0c784c9f.css.map": "/static/css/main.0c784c9f.css.map",
-    "main.2cf04346.js.map": "/static/js/main.2cf04346.js.map",
+    "main.23802f2d.css.map": "/static/css/main.23802f2d.css.map",
+    "main.0cb463fd.js.map": "/static/js/main.0cb463fd.js.map",
     "787.59752a46.chunk.js.map": "/static/js/787.59752a46.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c784c9f.css",
-    "static/js/main.2cf04346.js"
+    "static/css/main.23802f2d.css",
+    "static/js/main.0cb463fd.js"
   ]
 }
