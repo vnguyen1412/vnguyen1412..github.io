@@ -1,14 +1,12 @@
 import "./App.css";
-// import { person, person2 } from "./character-info.js";
+// import { person, person2, person3 } from "./character-info.js";
 import { people } from "./character-info.js";
-import { Button, Box, Grid, Stack, IconButton } from "@mui/material";
+import { Button, Box, Grid, IconButton } from "@mui/material";
 import { NavigateBefore, NavigateNext } from "@mui/icons-material";
 import { AspectRatio } from "@mui/joy";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
-// import characterPicture from './images/Jean.webp';
-// import jeanSkill from './images/JeanSkill.jpg';
-// import images from './constants/images.js';
+import { AnimatePresence, motion } from "framer-motion";
 import * as React from "react";
 import FlippableCard from "./components/flippable-card";
 
@@ -24,8 +22,33 @@ const BootstrapButton = styled(Button)({
   },
 });
 
+//control the distance of the slideshow animation
+const variants = {
+  hidden: direction => {
+    return {
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: "ease-in",
+    // transition: {
+    //   x: { type: 'spring', stiffness: 300, damping: 20},
+    //   opacity: { duration: 0.2 }
+    // }
+  },
+  exit: direction => {
+    return {
+      x: direction > 0 ? -1000 : 1000,
+      opacity: 0,
+    };
+  },
+};
+
 // const characterlist = [person, person2];
-const characterlist = people;
+// const characterlist = people;
 // let counter = 0;
 
 function App() {
@@ -41,81 +64,6 @@ function App() {
     </div>
   );
 }
-
-//original setup with more stuff hard coded
-// function InfoDisplay() {
-//   return(
-//     <Box
-//       className="App-info-display"
-//       sx={{p: 2}}
-//     >
-//       <Grid container className="test">
-//         <Grid item xs={12} md={4}>
-//           <Grid item xs={12}>
-//             <CharacterPicture />
-//           </Grid>
-//         </Grid>
-//         <Grid item xs={12} md={8}>
-//           <Grid item xs={12}>
-//             <CharacterName />
-//           </Grid>
-//           <Grid item xs={12}>
-//             <SkillList />
-//           </Grid>
-//         </Grid>
-//       </Grid>
-//     </Box>
-//   );
-// }
-
-// function CharacterPicture() {
-//   return(
-//     <Box>
-//       <AspectRatio
-//         variant="none"
-//         objectFit="contain"
-//         ratio="3/4"
-//         style={{position: "relative"}}
-//       >
-//         <img
-//           src={characterPicture}
-//           alt="Jean"
-//         />
-//       </AspectRatio>
-//     </Box>
-//   );
-// }
-
-// function SkillList() {
-//   return(
-//     <Box>
-//       {/* <h3>
-//         Weapon:
-//       </h3>
-//       <p>Sword</p> */}
-//       {/* <WeaponName /> */}
-//       <h3>
-//         Talents:
-//       </h3>
-//       <p>Normal Attack</p>
-//       <p>Gale Blade</p>
-//       <p>Dandelion Breeze</p>
-//       <p>Wind Companion</p>
-//       <p>Let the Wind Lead</p>
-//       <p>Guiding Breeze</p>
-//     </Box>
-//   );
-// }
-
-// function CharacterName() {
-//   return(
-//     <Box>
-//       <h2>
-//         Jean
-//       </h2>
-//     </Box>
-//   );
-// }
 
 function CharacterNameAndPicture({ characterName, characterPicture }) {
   return (
@@ -204,18 +152,39 @@ function WeaponName({ characterWeapon }) {
 // }
 
 function ShanaeTest() {
+  const characterlist = people;
+  // const characterlist = [person, person2, person3]
   let [counter, setCounter] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-  function HandleCharacterSwitch(isNext) {
-    if(isNext) {
-      setCounter((counter + 1) % characterlist.length);
+  // function HandleCharacterSwitch(isNext) {
+  //   if (isNext) {
+  //     setDirection(1);
+  //     setCounter((counter + 1) % characterlist.length);
+  //   } else if (!isNext && counter == 0) {
+  //     setDirection(-1);
+  //     setCounter(characterlist.length - 1);
+  //   } else {
+  //     setDirection(-1);
+  //     setCounter((counter - 1) % characterlist.length);
+  //   }
+  // }
+  function nextStep() {
+    setDirection(1);
+    if (counter === characterlist.length - 1) {
+      setCounter(0);
+      return;
     }
-    else if(!isNext && counter == 0) {
+    setCounter(counter + 1);
+  }
+
+  function prevStep() {
+    setDirection(-1);
+    if (counter === 0) {
       setCounter(characterlist.length - 1);
+      return;
     }
-    else {
-      setCounter((counter - 1) % characterlist.length);
-    }
+    setCounter(counter - 1);
   }
 
   return (
@@ -223,21 +192,34 @@ function ShanaeTest() {
       {/* <SwitchController /> */}
 
       {/* <div className="test1"> */}
-        <Grid container className="info-container" spacing={2}>
-          <Grid item md={1} sx={{alignSelf: "center"}}>
-            <IconButton
-              color="secondary"
-              aria-label="arrow-back"
-              size="large"
-              style={{ padding: "0" }}
-              onClick={() => HandleCharacterSwitch(false)}
-            >
-              <NavigateBefore sx={{ color: "white", fontSize: "3em" }} />
-            </IconButton>
-          </Grid>
+      <Grid container className="info-container" spacing={2}>
+        <Grid item md={1} sx={{ alignSelf: "center" }}>
+          <IconButton
+            color="secondary"
+            aria-label="arrow-back"
+            size="large"
+            style={{ padding: "0" }}
+            // onClick={() => HandleCharacterSwitch(false)}
+            onClick={prevStep}
+          >
+            <NavigateBefore sx={{ color: "white", fontSize: "3em" }} />
+          </IconButton>
+        </Grid>
 
-          {/* picture container */}
-          <Grid item xs={12} md={3}>
+        {/* picture container */}
+        <AnimatePresence initial={false} mode='wait'>
+          <Grid
+            item
+            xs={12}
+            md={3}
+            component={motion.div}
+            variants={variants}
+            animate="visible"
+            initial="hidden"
+            exit="exit"
+            key={characterlist[counter].name}
+            custom={direction}
+          >
             <Grid item xs={12}>
               <CharacterNameAndPicture
                 characterName={characterlist[counter].name}
@@ -249,41 +231,20 @@ function ShanaeTest() {
             </Grid>
           </Grid>
 
-          {/* skill container */}
-          {/* <Grid container item xs={12} md={8} spacing={4}>
-            <SkillCard
-              skillName={characterlist[counter].skillNames[0]}
-              skillPicture={characterlist[counter].skillImages[0]}
-              skillDescription={characterlist[counter].skillDescriptions[0]}
-            />
-            <SkillCard
-              skillName={characterlist[counter].skillNames[1]}
-              skillPicture={characterlist[counter].skillImages[1]}
-              skillDescription={characterlist[counter].skillDescriptions[1]}
-            />
-            <SkillCard
-              skillName={characterlist[counter].skillNames[2]}
-              skillPicture={characterlist[counter].skillImages[2]}
-              skillDescription={characterlist[counter].skillDescriptions[2]}
-            />
-            <SkillCard
-              skillName={characterlist[counter].skillNames[3]}
-              skillPicture={characterlist[counter].skillImages[3]}
-              skillDescription={characterlist[counter].skillDescriptions[3]}
-            />
-            <SkillCard
-              skillName={characterlist[counter].skillNames[4]}
-              skillPicture={characterlist[counter].skillImages[4]}
-              skillDescription={characterlist[counter].skillDescriptions[4]}
-            />
-            <SkillCard
-              skillName={characterlist[counter].skillNames[5]}
-              skillPicture={characterlist[counter].skillImages[5]}
-              skillDescription={characterlist[counter].skillDescriptions[5]}
-            />
-          </Grid> */}
-
-          <Grid container item xs={12} md={7} spacing={4}>
+          <Grid
+            container
+            item
+            xs={12}
+            md={7}
+            spacing={4}
+            component={motion.div}
+            variants={variants}
+            animate="visible"
+            initial="hidden"
+            exit="exit"
+            key={characterlist[counter].skillNames[0]}
+            custom={direction}
+          >
             <FlippableCard
               skillName={characterlist[counter].skillNames[0]}
               skillPicture={characterlist[counter].skillImages[0]}
@@ -315,19 +276,21 @@ function ShanaeTest() {
               skillDescription={characterlist[counter].skillDescriptions[5]}
             />
           </Grid>
+        </AnimatePresence>
 
-          <Grid item md={1} sx={{alignSelf: "center"}}>
-            <IconButton
-              color="secondary"
-              aria-label="arrow-forward"
-              size="large"
-              style={{ padding: "0" }}
-              onClick={() => HandleCharacterSwitch(true)}
-            >
-              <NavigateNext sx={{ color: "white", fontSize: "3em" }} />
-            </IconButton>
-          </Grid>
+        <Grid item md={1} sx={{ alignSelf: "center" }}>
+          <IconButton
+            color="secondary"
+            aria-label="arrow-forward"
+            size="large"
+            style={{ padding: "0" }}
+            // onClick={() => HandleCharacterSwitch(true)}
+            onClick={nextStep}
+          >
+            <NavigateNext sx={{ color: "white", fontSize: "3em" }} />
+          </IconButton>
         </Grid>
+      </Grid>
       {/* </div> */}
     </Box>
   );

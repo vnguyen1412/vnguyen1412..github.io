@@ -36,6 +36,15 @@ class CharacterInfo{
 //     ['Desc1', 'Desc2', 'Desc3', 'Desc4', 'Desc5', 'Desc6']
 // )
 
+// let person3 = new CharacterInfo(
+//     'Raiden Shogun',
+//     images.Shogun,
+//     'Polearm',
+//     ['Origin', 'Transcendence: Baleful Omen', 'Secret Art: Musou Shinsetsu', 'Wishes Unnumbered', 'Enligntened One', 'All-Preserver'],
+//     [images.ShogunNormalAttack, images.ShogunSkill, images.ShogunBurst, images.ShogunPassive1, images.ShogunPassive2, images.ShogunPassive3],
+//     ['Desc1', 'Desc2', 'Desc3', 'Desc4', 'Desc5', 'Desc6']
+// )
+
 const people = [
     new CharacterInfo(
         'Jean',
@@ -76,7 +85,7 @@ const people = [
 
 // export default CharacterInfo
 export default people;
+// export default person;
 
 export {people}
-
-// export {person, person2}
+// export {person, person2, person3}
